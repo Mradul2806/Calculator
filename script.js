@@ -28,7 +28,8 @@ arr.forEach(button => {
         }
 
         else if (e.target.innerHTML === '.' && string.includes('.')) {
-            string = string.toString() ;
+            string = string.toString();
+
             // updateDisplay();
             // if(string.includes('+') || string.includes('-') || string.includes('*') || string.includes('/') || string.includes('%')){
             //     string = string.toString();
@@ -51,8 +52,23 @@ arr.forEach(button => {
             string += e.target.innerHTML;
             input.value = string;
         }
+
+        $(document).ready(function(){
+            // $("p").css("background-color","red");
+    
+            if(string.length >= 10){
+                console.log(string.length);
+                $("string").css("font-size","50px");
+            }
+            // else{
+            //     console.log(string.length);
+            // }
+        })
     })
 })
+
+
+
 
 function updateDisplay() {
     const display = document.getElementById('inputbox');
